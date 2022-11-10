@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import classes from "./ProgressBar.module.css";
-import Button from "../button/Button";
+
 
 export default function ProgressBar({ next, prev, submit, progress }) {
   const [tooltip, setTooltip] = useState(false);
@@ -35,13 +35,13 @@ export default function ProgressBar({ next, prev, submit, progress }) {
           ></div>
         </div>
       </div>
-      <Button
+      <button
         className={classes.next}
         onClick={progress === 100 ? submit : next}
       >
         <span>{progress === 100 ? "Submit Quiz" : "Next Question"}</span>
         <span className="material-icons-outlined"> arrow_forward </span>
-      </Button>
+      </button>
     </div>
   );
 }

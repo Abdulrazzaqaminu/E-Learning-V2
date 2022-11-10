@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/common/header/Header";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import About from "./components/about/About";
 import CourseHome from "./components/allcourses/CourseHome";
 import Pricing from "./components/pricing/Pricing";
@@ -8,10 +8,13 @@ import Blog from "./components/blog/Blog";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/common/footer/Footer";
 import Home from "./components/home/Home";
+import Account from "./components/account/Account";
 import MyCourses from "./components/my-courses/MyCourses";
 import Quiz from "./components/quiz/quiz.component";
 import SignupForm from "./components/signup/SignupForm";
+import Login  from "./components/login/Login";
 function App() {
+  
   return (
     <BrowserRouter>
       <div className="app">
@@ -22,6 +25,8 @@ function App() {
           <Route exact path="/my_courses" element={<MyCourses />} />
           <Route exact path="/quiz/:id" element={<Quiz />} />
           <Route exact path="/signup" element={<SignupForm />} />
+          <Route exact path="/account" element={<Account />} />
+          <Route path="/login" element={<Login/>} />
         </Routes>
       </div>{" "}
     </BrowserRouter>

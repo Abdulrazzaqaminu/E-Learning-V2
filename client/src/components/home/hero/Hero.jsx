@@ -17,9 +17,11 @@ const Hero = () => {
               Vokalia and Consonantia, there live the blind texts.
             </p>
             <div className="button">
-              <button className="primary-btn">
-                SIGN UP <i className="fa fa-long-arrow-alt-right"></i>
-              </button>
+                <a href="/signup">
+                  <button className="primary-btn">
+                      SIGN UP <i className="fa fa-long-arrow-alt-right"></i>
+                  </button>
+                </a>
               <button>
                 VIEW COURSES <i className="fa fa-long-arrow-alt-right"></i>
               </button>
